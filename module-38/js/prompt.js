@@ -6,3 +6,16 @@ const showAlert = () =>{
         alert('ki khobor tipu');
     }
 }
+
+//------confirm message----------
+const askSomething = () =>{
+    const decission = confirm('are you coming today?');
+    console.log(decission);
+    if(decission === true)
+    {
+        alert('dosto 500 tk de');
+    }
+    else{
+        alert('ashbo na re');
+    }
+}
