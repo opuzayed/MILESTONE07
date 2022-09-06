@@ -19,3 +19,12 @@ const askSomething = () =>{
         alert('ashbo na re');
     }
 }
+
+//---------prompt message ---------
+const userInfo = () =>{
+   const name = prompt('tell us your name');
+    console.log(name);
+    if(!!name){
+        console.log('my name is ', name);
+    }
+}
