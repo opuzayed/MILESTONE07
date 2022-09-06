@@ -39,4 +39,8 @@ document.getElementById('btn-add-name').addEventListener('click', function(){
 //--------remove-item-from-local-storage---------
 document.getElementById('btn-remove-name').addEventListener('click', function(){
     localStorage.removeItem('name');
-})
+});
+//------------clear local storage-------------
+document.getElementById('btn-clear').addEventListener('click', function(){
+localStorage.clear();
+});
