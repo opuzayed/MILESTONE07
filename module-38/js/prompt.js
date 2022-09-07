@@ -63,7 +63,8 @@ const addProduct = () =>{
     //set to local storage
     //simple way
     //localStorage.setItem(productName, quantity);
-    savedItemToLocalStorage(productName, quantity);
+    //savedItemToLocalStorage(productName, quantity);
+    savedItemToLocalStorage(productName, quantity);//p-kon parameter divo
 }
 //-----------again-------
 const getShoppingCartFromLocalStorage = () =>{
@@ -81,6 +82,8 @@ const cart = getShoppingCartFromLocalStorage();
     //add product to the object as property
     cart[product] = quantity;
     const cartStringified = JSON.stringify(cart);
+    //add to local storage
+    localStorage.setItem('cart', cartStringified);
 }
 
 const addProductToDisplay = (product, quantity) =>{
@@ -89,14 +92,15 @@ const addProductToDisplay = (product, quantity) =>{
     li.innerText = `${product} : ${quantity}`;
     productContainer.appendChild(li);
 }
+
 const displayStoredProducts = () =>{
     const cart = getShoppingCartFromLocalStorage();
     for(const product in cart)
     {
         const quantity = cart[product];
         console.log(product, quantity);
-        addProductToDisplay(productName, quantity);
+        addProductToDisplay(product, quantity);
     }
-   
+    
 }
 displayStoredProducts();
