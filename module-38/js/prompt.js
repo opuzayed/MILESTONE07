@@ -56,8 +56,16 @@ const addProduct = () =>{
     const productName = getInputValueById('product-name-field');
     const quantity =    getInputValueById('product-quantity-field');
     console.log(productName, quantity);
-
+    //--------DISPLAY PRODUCTS ON UI--------
+    displayProducts(productName, quantity);
     //set to local storage
     //simple way
     localStorage.setItem(productName, quantity);
+}
+
+const displayProducts = (product, quantity) =>{
+    const productContainer = document.getElementById('product-container');
+    const li = document.createElement('li');
+    li.innerText = `${product} : ${quantity}`;
+    productContainer.appendChild(li);
 }
