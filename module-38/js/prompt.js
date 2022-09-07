@@ -44,3 +44,16 @@ document.getElementById('btn-remove-name').addEventListener('click', function(){
 document.getElementById('btn-clear').addEventListener('click', function(){
 localStorage.clear();
 });
+
+//-----------add product item-----------
+const getInputValueById = id =>{
+    const inputField = document.getElementById(id);
+    const inputValue = inputField.value;
+    inputField.value = '';
+    return inputValue;
+}
+const addProduct = () =>{
+    const productName = getInputValueById('product-name-field');
+    const quantity =    getInputValueById('product-quantity-field');
+    console.log(productName, quantity);
+}
