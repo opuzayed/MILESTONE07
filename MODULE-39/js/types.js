@@ -87,4 +87,30 @@ console.log(addValue);
 //check function parameter number
 console.log(add.length);
 
+//------------------------ primitive type pass by value-------------------
+let num1 = 12;
+let num2 = 12;
+function multifly(a, b)
+{
+     a = 10;
+    let result = a * b;
+    return result;
+}
+console.log(num1);
+let multiResult = multifly(num1, num2);
+console.log(multiResult);
+//------------------another-example(object and array pass by reference)-----------------------
+let student1 = {name : 'jalil', partner : 'borsha'};
+let student2 = {name : 'sakib', partner : 'biswash'};
+
+function makeMovie(couple1, couple2)
+{
+    student1.name = 'ononto';
+    student2.partner = 'sabnur';
+}
+console.log(student1, student2);
+makeMovie(student1, student2);
+console.log(student1, student2);
+
+
 
