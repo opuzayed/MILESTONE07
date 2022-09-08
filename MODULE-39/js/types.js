@@ -54,13 +54,13 @@ y = 12;
 function greetings(person, name)
 {
     //console.log(greetingsHandler());
-    greetingsHandler(name);
-    goodEvening(name);
+    //greetingsHandler(name);
+    //goodEvening(name);
 }
 //const name = {name : 'mofiz', age : 54};
 function greetingsHandler(name)
 {
-    console.log('Hello', name);
+    //console.log('Hello', name);
 }
 function goodEvening(name)
 {
@@ -70,5 +70,21 @@ greetings(greetingsHandler, 'opu');
 greetings(greetingsHandler, 'dipu');
 greetings(greetingsHandler, 'topu');
 greetings(goodEvening, 'taposh');
+
+//--------------function - arguments------------
+function add(a, b, c, d)
+{
+    //arguments-arraylikeobject
+    //array -akare-arguments-paite-hole
+    const args = [...arguments];
+    console.log(args);
+    console.log(arguments[5]);
+    let result = a + b + c + d;
+    return result;
+}
+let addValue = add(1,2,3,4,5,6,7,8);
+console.log(addValue);
+//check function parameter number
+console.log(add.length);
 
 
