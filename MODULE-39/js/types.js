@@ -41,3 +41,11 @@ y = 12;
                         5.check false(!variabl name)
  */
 
+/* ---------------------diff (== or ===)-------------------
+                            (==)
+                            1.value equal kina check Kore
+                            2.vitore vitore convert kore etake bole coercion
+                            (=== most of time use ===)
+                            1.value and type check kore equal kina
+*/
+
