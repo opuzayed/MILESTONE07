@@ -48,6 +48,27 @@ y = 12;
                             (=== most of time use ===)
                             1.value and type check kore equal kina
 
-*/                            
+*/ 
+
+//------------------callback-function------------------------
+function greetings(person, name)
+{
+    //console.log(greetingsHandler());
+    greetingsHandler(name);
+    goodEvening(name);
+}
+//const name = {name : 'mofiz', age : 54};
+function greetingsHandler(name)
+{
+    console.log('Hello', name);
+}
+function goodEvening(name)
+{
+console.log('good evening', name);
+}
+greetings(greetingsHandler, 'opu');
+greetings(greetingsHandler, 'dipu');
+greetings(greetingsHandler, 'topu');
+greetings(goodEvening, 'taposh');
 
 
