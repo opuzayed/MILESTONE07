@@ -24,4 +24,20 @@ y = 12;
  
 */
 
+/* ----------------------truthy or false----------------
+                        truthy
+                        1.pos or neg number
+                        2.any string with ' '
+                        3.'0'
+                        4.[]
+                        5.{}
+                        6.check truthy(!!variable name)
+
+                        false
+                        1.0
+                        2.''
+                        3.undefined
+                        4.null
+                        5.check false(!variabl name)
+ */
 
