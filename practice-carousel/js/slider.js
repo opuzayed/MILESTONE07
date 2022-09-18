@@ -5,8 +5,12 @@ const images = [
     'images/pic-4.jpg'
 ];
 let imgIndex = 0;
+let image = document.getElementById('carousel-image');
 setInterval(() => {
+    if(imgIndex === images.length)
+    imgIndex = 0;
     let imgLink = images[imgIndex];
-    console.log(imgLink);
-imgIndex++;
+    //console.log(imgLink);
+    image.setAttribute('src', imgLink);
+    imgIndex++;
 },1000)
