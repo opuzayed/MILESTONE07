@@ -4,7 +4,14 @@ const images = [
     'images/pic-3.jpg',
     'images/pic-4.jpg'
 ];
-
+let imgIndex = 0;
+let image = document.getElementById('img-carousel');
 setInterval(() => {
-    console.log('Hello');
+    
+    if(imgIndex === images.length)
+    imgIndex = 0;
+    let imgLink = images[imgIndex];
+    //console.log(imgLink);
+    image.setAttribute('src',imgLink);
+    imgIndex++;
 },1000);
